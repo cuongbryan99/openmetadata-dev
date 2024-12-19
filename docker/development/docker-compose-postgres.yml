@@ -27,7 +27,7 @@ services:
       - opensearch
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: svtech@123
     expose:
       - 5432
     ports:
@@ -390,7 +390,7 @@ services:
       DB_PARAMS: ${DB_PARAMS:-allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC}
       DB_USE_SSL: ${DB_USE_SSL:-false}
       DB_USER: ${DB_USER:-openmetadata_user}
-      DB_USER_PASSWORD: ${DB_USER_PASSWORD:-openmetadata_password}
+      DB_USER_PASSWORD: ${DB_USER_PASSWORD:-openmetadata}
       DB_HOST: ${DB_HOST:-postgresql}
       DB_PORT: ${DB_PORT:-5432}
       OM_DATABASE: ${OM_DATABASE:-openmetadata_db}
@@ -492,7 +492,7 @@ services:
       AIRFLOW_DB: ${AIRFLOW_DB:-airflow_db}
       DB_USER: ${AIRFLOW_DB_USER:-airflow_user}
       DB_SCHEME: ${AIRFLOW_DB_SCHEME:-postgresql+psycopg2}
-      DB_PASSWORD: ${AIRFLOW_DB_PASSWORD:-airflow_pass}
+      DB_PASSWORD: ${AIRFLOW_DB_PASSWORD:-airflow}
       # extra connection-string properties for the database
       # EXAMPLE 
       # require SSL (only for Postgres)

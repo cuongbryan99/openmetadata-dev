@@ -230,7 +230,7 @@ class SamplerInterface(ABC):
         """
         try:
             logger.debug(
-                f"Fetching sample data for {self.entity.fullyQualifiedName.root}..."
+                f"Fetching sample data for {self.entity.fullyQualifiedName.root} and storage {self.storage_config}"
             )
             table_data = self.fetch_sample_data(self.columns)
             # Only store the data if configured to do so
