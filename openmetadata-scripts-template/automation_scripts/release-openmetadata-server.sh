@@ -3,7 +3,7 @@
 # Define paths
 SOURCE_ARCHIVE="/home/openmetadata-dev/openmetadata-dist/target/openmetadata-1.6.1.tar.gz"
 DEST_FOLDER="/home/openmetadata-dev/openmetadata-release"
-TEMPLATE_FILE="/home/openmetadata/config_templates/openmetadata_template.yaml"
+TEMPLATE_FILE="/home/openmetadata-dev/openmetadata-scripts-template/config_templates/openmetadata_template.yaml"
 TARGET_CONFIG="$DEST_FOLDER/conf/openmetadata.yaml"
 
 # Extract the archive
@@ -39,8 +39,9 @@ fi
 cd "$DEST_FOLDER" || { echo "Failed to change directory to $DEST_FOLDER"; exit 1; }
 
 # Run bootstrap script
-echo "Running bootstrap script: bootstrap/openmetadata-ops.sh drop-create"
-echo "DELETE" | sh bootstrap/openmetadata-ops.sh drop-create
+
+# echo "Running bootstrap script: bootstrap/openmetadata-ops.sh drop-create"
+# echo "DELETE" | sh bootstrap/openmetadata-ops.sh drop-create
 
 # Start OpenMetadata server
 echo "Starting OpenMetadata server with: bin/openmetadata-server-start.sh conf/openmetadata.yaml"

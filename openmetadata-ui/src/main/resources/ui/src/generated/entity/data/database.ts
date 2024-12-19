@@ -375,9 +375,12 @@ export enum ProfileSampleType {
  * Storage config to store sample data
  */
 export interface SampleDataStorageConfig {
-    config?: DataStorageConfig;
+    config?: DataStorageConfig | DataStorageLocal;
 }
 
+export interface DataStorageLocal {
+    formatFile?: string;
+}
 /**
  * Storage config to store sample data
  */
